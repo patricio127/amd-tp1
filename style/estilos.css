@@ -1,25 +1,127 @@
+/*https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557*/
 body {
     width: 80%;
     margin: auto;
+    background-color: #a8dadc;
+}
+h2{
+    text-align: center;
+    padding: 20px 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+header nav img {
+    width: 100px;
+    height: 100px;
+}
+header h1 {
+    line-height: 100px;
+    margin-left: 100px;
+}
+a {
+    text-decoration: none;
 }
 #app {
     padding-top: 50px;
 }
 #formulario {
-    padding-top: 50px;
+    padding: 50px;
     margin: auto;
     width: 900px;
-    background-color: aliceblue;
+    background-color: #f1faee;
 }
 #formulario button {
     display: block;
     justify-content:center;
     margin: 2em auto;
 }
-#formulario .vista-previa {
+#lista-productos div.img{
     height: 150px;
     max-width: 100%;
 }
-#formulario img{
+#formulario .vista-previa{
+    height: 100%;
+    max-width: 100%;
+}
+#formulario .vista-previa img{
     max-height: 100%;
+    max-width: 100%;
+}
+
+#lista-productos .producto > div{
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+    padding: 10px;
+    
+}
+#lista-productos div.img{
+    height: 50px;
+    max-width: 100%;
+}
+#lista-productos .producto button{
+    width: 100%;
+    line-height: 35px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+#lista-productos div:nth-child(6) button, #formulario button{
+    background-color: #1d3557;
+    color:#f1faee;
+}
+#lista-productos div:nth-child(6) button:hover, #formulario button:hover{
+    background-color: #1d3557c5;
+}
+#lista-productos div:nth-child(7) button{
+    background-color: #e63946;
+    color: #f1faee;
+}
+#lista-productos div:nth-child(7) button:hover{
+    background-color: #e63947d8;
+}
+#lista-productos img {
+    max-height: 50px;
+}
+#lista-productos  ol  li {
+    list-style-type: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 5px 5px rgb(0 0 0 / 20%);
+    margin-bottom: 10px;
+    background-color: #f1faee;
+}
+#lista-productos p {
+    text-align: center;
+    font-size: 2em;
+}
+#agregar, #volver {
+    width: 10em;
+    height: 3em;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #1d3557;
+    margin: 50px 50px 50px 0;
+}
+#volver {
+    color:#f1faee;
+}
+#agregar:hover,#volver:hover {
+    background-color: #1d3557c9;
+    box-shadow: 2px 2px rgb(0 0 0 / 20%);
+}
+#agregar a {
+    display: flex;
+    color:#f1faee;
+}
+#agregar a span {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../imagenes/add.svg);
+    background-size: contain;
+    display: block;
 }

@@ -1,7 +1,10 @@
 Vue.component('product-list-component', {
     template: `
-    <div>
-        <ol>
+    <div id="lista-productos">
+        <h2>Lista de productos</h2>
+        <div id="agregar"><router-link to="/agregar" class="nav-link"><span></span>Agregar</router-link></div>
+        <transition-group tag="ol" enter-active-class="animate__animated animate__bounceInLeft"
+                            leave-active-class=" animate__animated animate__fadeOutRightBig" v-if="productos.length > 0">
             <li v-for="producto in productos" :key="producto.codigo">
                 <product-component v-show="editandoCodigo != producto.codigo" :producto="producto"
                                     @editar="editar($event)" @eliminar="eliminar($event)">
@@ -10,7 +13,8 @@ Vue.component('product-list-component', {
                                 @terminarEdicion="terminarEdicion">
                 </edit-component>
             </li>
-        </ol>
+        </transition-group>
+        <p v-else>Aún no hay productos</p>
     </div>`,
     mounted:function(){
         this.productos=leerListaProdutos();
