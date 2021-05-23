@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Ejemplos Directivas</title>
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" >
+		<link rel="stylesheet" href="style/estilos.css" >
+		<script src="lib/vue.js"></script>
+		<script src="lib/vue-router.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<nav>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><router-link to="/" class="nav-link active">Productos</router-link></li>
+					<li class="nav-item"><router-link to="/agregar" class="nav-link active">Agregar</router-link></li>
+				</ul>
+				<transition mode="out-in">
+					<router-view></router-view>
+				</transition>
+			</nav>
+			<div></div>
+		</div>
+		
+
+		
+		<script src="lib/bootstrap/js/jquery-3.5.1.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="scripts/routes/routes.js"></script>
+		<script src="scripts/components/form.js"></script>
+		<script src="scripts/components/product-list.js"></script>
+		<script src="scripts/components/product.js"></script>
+		<script src="scripts/components/crear.js"></script>
+		<script src="scripts/components/editar.js"></script>
+		<script src="scripts/app.js"></script>
+	</body>
+</html>
