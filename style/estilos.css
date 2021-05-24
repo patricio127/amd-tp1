@@ -1,30 +1,33 @@
 /*https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557*/
 body {
-    width: 80%;
-    margin: auto;
     background-color: #a8dadc;
 }
-h2{
+section, main {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+h2, h3{
     text-align: center;
     padding: 20px 0;
+}
+ol {
+    padding: 0;
 }
 header{
     display: flex;
     justify-content: center;
+    padding-top: 30px;
 }
 header nav img {
     width: 100px;
     height: 100px;
 }
 header h1 {
-    line-height: 100px;
-    margin-left: 100px;
+    display: none;
 }
 a {
     text-decoration: none;
-}
-#app {
-    padding-top: 50px;
 }
 #formulario {
     padding: 50px;
@@ -84,14 +87,24 @@ a {
 }
 #lista-productos img {
     max-height: 50px;
+    max-width: 90px;
 }
-#lista-productos  ol  li {
+#lista-productos .encabezado {
+    margin: 0 0 15px 0;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+#lista-productos  ol  li, #lista-productos .encabezado {
     list-style-type: none;
     padding-left: 15px;
     padding-right: 15px;
-    box-shadow: 5px 5px rgb(0 0 0 / 20%);
     margin-bottom: 10px;
     background-color: #f1faee;
+}
+#lista-productos ol li{
+    box-shadow: 5px 5px rgb(0 0 0 / 20%);
 }
 #lista-productos p {
     text-align: center;
@@ -125,3 +138,78 @@ a {
     background-size: contain;
     display: block;
 }
+section#carousel {
+    width: 100%;
+    height: 80%;
+}
+.card {
+    background-color: #f1faee;
+}
+.card-body img, #reseñas .card-img-top{
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: auto;
+    padding: 20px;
+}
+#productos div p:first-child{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+#productos .card .contenedor-img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+#reseñas div div,#productos >div >div {
+    margin: 10px 10px;
+    border-radius: 10px;
+    border: none;
+}
+#reseñas div div.card:hover, #productos div div.card:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+footer {
+    background-image: url('../imagenes/footer.jpg');
+    padding: 50px 0 40px;
+}
+footer h3, footer h4 {
+    color: rgb(230, 230, 230);
+}
+footer h3 {
+    padding: 0 0 20px 0;
+    text-align: left;
+}
+footer > div {
+    display: block;
+    padding: 0 40px;
+}
+footer ul li {
+    color: #a8dadc;
+    list-style: none;
+}
+footer ul li a{
+    color: #a8dadc;
+    text-decoration: none;
+}
+footer ul li a img {
+    width: 16px;
+    height: 16px;
+}
+footer > p:last-child{
+    text-align: center;
+    margin: 0;
+    padding: 50px 20px 0;
+    font-size: 0.75em;
+}
+footer > div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+} 

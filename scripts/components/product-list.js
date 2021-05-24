@@ -3,6 +3,13 @@ Vue.component('product-list-component', {
     <div id="lista-productos">
         <h2>Lista de productos</h2>
         <div id="agregar"><router-link to="/agregar" class="nav-link"><span></span>Agregar</router-link></div>
+        <div class="row encabezado" v-if="productos.length > 0">
+            <div class="col-1">Codigo</div>
+            <div class="col-1">Imagen</div>
+            <div class="col-2">Nombre</div>
+            <div class="col-5">Descripcion del producto</div>
+            <div class="col-1">Precio</div>
+        </div>
         <transition-group tag="ol" enter-active-class="animate__animated animate__bounceInLeft"
                             leave-active-class=" animate__animated animate__fadeOutRightBig" v-if="productos.length > 0">
             <li v-for="producto in productos" :key="producto.codigo">
