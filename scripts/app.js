@@ -14,7 +14,7 @@ const agregarProducto = function(producto) {
     console.log(listaProductos);
     guardarEnLS();
 };
-const actualizarProducto=function(producto){
+const actualizarProducto=function(){
     guardarEnLS();
 };
 const eliminarProducto=function(producto){

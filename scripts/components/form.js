@@ -7,10 +7,12 @@ Vue.component('form-component', {
                                 <label for="codigo" class="form-label">Codigo del producto</label>
                                 <input type="number" v-on:keydown.190.stop.prevent v-on:keydown.188.stop.prevent v-on:keydown.189.stop.prevent
                                 v-on:keydown.109.stop.prevent v-on:keydown.110.stop.prevent  v-on:keydown.107.stop.prevent  
-                                v-model.number="producto.codigo" class="form-control" placeholder="1234" id="codigo" name="codigo" required>
+                                v-model.number="producto.codigo" class="form-control" placeholder="1234" id="codigo" name="codigo" 
+                                :class="{'is-invalid': codigoRepetido}" required>
+                                <p v-if="validando && codigoRepetido" class="invalid-feedback">El codigo del producto ya existe</p>
                             </div>
                             <div class="col-12">
-                                <label for="nombre">Nombre del Producto</label>
+                                <label for="nombre" class="form-label">Nombre del Producto</label>
                                 <input type="text" v-model="producto.nombre" class="form-control" 
                                 placeholder="Nombre del producto" id="nombre" name="nombre" required>
                             </div>
@@ -37,7 +39,6 @@ Vue.component('form-component', {
                             </div>
                         </div>
                     </div>
-                    <p v-if="validando && codigoRepetido">El codigo del producto ya existe</p>
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary mx-auto px-5 ">
                             {{modoEdicion ? "Listo" : "Guardar"}}

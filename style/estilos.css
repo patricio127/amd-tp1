@@ -49,6 +49,9 @@ a {
     height: 150px;
     max-width: 100%;
 }
+#formulario .form-label {
+    margin-top: .5rem;
+}
 #formulario .vista-previa{
     height: 100%;
     max-width: 100%;
