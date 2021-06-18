@@ -1,2 +1,2 @@
-# amd-tp1
- amd tp1
+# Aplicaciones para Dispositivos Móviles-tp1
+Trabajo practico para Vue.js
